@@ -230,6 +230,8 @@ li::marker {
     position: relative;
 }
 
+
+
 .btn-cir {
     width: 140px;
     height: 140px;
@@ -239,6 +241,7 @@ li::marker {
     background-size: 50%;
     background-position: center;
     background-repeat: no-repeat;
+    
 }
 
 .picked-text {
@@ -273,17 +276,26 @@ li::marker {
     cursor: pointer;
 }
 
-
-@keyframes pop {
-    from {
-        transform: scale(1);
-    }
-
-    to {
-        transform: scale(1.2);
-    }
+.announce-winner{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    align-items: center;
+}
+.announce-winner img{
+    height:201px;
+    width: 200px;
 }
 
+.hurray-text{
+    font-size: 91px;
+    margin:0;
+    letter-spacing: 0.1em;
+    color: white;
+}
+#winner {
+    display: none;
+}
 .hidden {
     display: none;
 }

@@ -6,6 +6,8 @@ const chooseBox = document.getElementById('choose-box');
 const userChoiceBtn = document.getElementById('user-choice-btn');
 const computerChoiceBtn = document.getElementById('computer-choice-btn');
 const resultText = document.getElementById('result-text');
+const winText = document.getElementById('win-text');
+const winnerBox = document.getElementById('winner');
 const choiceButtons = document.querySelectorAll('.choice-btn');
 
 let humanScore = parseInt(localStorage.getItem('humanScore')) || 0;
@@ -19,22 +21,18 @@ choiceButtons.forEach(button => {
     const userChoice = button.getAttribute("data-choice");
     const computerChoice = choices[Math.floor(Math.random() * choices.length)];
 
-   
     userChoiceBtn.innerHTML = button.innerHTML;
     userChoiceBtn.style.borderColor = getBorderColor(userChoice);
 
-    
     const computerButton = document.querySelector(`.choice-btn[data-choice="${computerChoice}"]`);
     if (computerButton) {
       computerChoiceBtn.innerHTML = computerButton.innerHTML;
       computerChoiceBtn.style.borderColor = getBorderColor(computerChoice);
     }
 
-
     const result = getResult(userChoice, computerChoice);
     resultText.textContent = result;
 
-    
     if (result === "YOU WIN") {
       humanScore++;
     } else if (result === "YOU LOSE") {
@@ -47,16 +45,44 @@ choiceButtons.forEach(button => {
     localStorage.setItem('humanScore', humanScore);
     localStorage.setItem('computerScore', computerScore);
 
-    showChooseBox();
+    // CHECK SCORE
+    if (humanScore >= 15 || computerScore >= 15) {
+      checkFinalWinner();  // if 15 reached, show winner
+    } else {
+      showChooseBox();     // otherwise, continue the game
+    }
   });
 });
 
 function showChooseBox() {
   choiceBox.classList.add("hidden");
   chooseBox.classList.remove("hidden");
+  winnerBox.classList.add("hidden");
+}
+
+function showWinner() {
+  choiceBox.classList.add("hidden");
+  chooseBox.classList.add("hidden");
+  winnerBox.classList.remove("hidden");
+}
+
+function checkFinalWinner() {
+  if (humanScore > computerScore) {
+    winText.textContent = "YOU WON!";
+  } else {
+    winText.textContent = "COMPUTER WON!";
+  }
+  showWinner();
+
+  // Reset scores
+  humanScore = 0;
+  computerScore = 0;
+  localStorage.setItem('humanScore', humanScore);
+  localStorage.setItem('computerScore', computerScore);
 }
 
 function playAgain() {
+  winnerBox.classList.add("hidden");
   chooseBox.classList.add("hidden");
   choiceBox.classList.remove("hidden");
 }
@@ -79,8 +105,6 @@ function getResult(user, computer) {
   }
   return "YOU LOSE";
 }
-
-
 
 const rulesButton = document.getElementById("rules-button");
 const popup = document.getElementById("rules-popup");
