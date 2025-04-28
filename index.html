@@ -39,17 +39,17 @@
 
         <div class="choices">
             <div class="sps">
-                <button class="stone" style="border: 16px solid #0074B6" class="choice">
+                <button class="stone choice-btn" data-choice="rock" style="border: 16px solid #0074B6">
                     <img src="img/e2f514e97d8f1b87d406a7bced07190e2c368075.png" />
                 </button>
-                <button class="scissor"style="border: 16px solid #BD00FF" class="choice" data-choice="scissors">
+                <button class="scissor choice-btn" data-choice="scissors" style="border: 16px solid #BD00FF">
                     <img src="img/388b63da8e9ba336eea3ea7f107fc48755a6b68d.png" />
                 </button>
-                <button class="paper" style="border: 16px solid #FFA943" class="choice" data-choice="paper">
+                <button class="paper choice-btn" data-choice="paper" style="border: 16px solid #FFA943">
                     <img src="img/9e584d5f879bf162796082bc4c606349436e0c52.png" />
                 </button>
-  
             </div>
+
             <div class="pop">
                 <div id="rules-popup" class="popup">
                     <div> </div>
@@ -66,13 +66,13 @@
                     </div>
                 </div>
 
-                <div class="rules"> <button id="rules-button" onclick="openRules()">RULES</button></div>
+                <div class="rules"> <button id="rules-button">RULES</button></div>
             </div>
         </div>   
         
                 
-                <!-- Choose Box container (initially hidden) -->
-                <div class="choose-box hidden" id="choose-box">
+                
+                <div class="choose-box hidden" id="choose-box" >
                     <div class="box-left">
                         <div class="player-circle">
                             <button class="btn-cir" id="user-choice-btn"></button>

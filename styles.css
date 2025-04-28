@@ -3,7 +3,7 @@ body {
     text-align: center;
     background-color: #8CC461;
 }
-
+ 
 .main{    
     height: 715px;
     width: 100%;
@@ -103,7 +103,7 @@ display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
     gap: 94px;
-    margin-left: 400px;
+    margin-left: 475px;
     
 }
 
@@ -166,7 +166,7 @@ img {
     display: flex;
     flex-direction: column;
     
-    margin-left: 100px;
+    margin-left: 200px;
     
 }
 
@@ -178,6 +178,7 @@ img {
     border-radius: 13px;
     background-color: #004429;
     color: white;
+    position: relative;
     
 
 }
@@ -201,16 +202,19 @@ li{
 li::marker {
     color: yellow;
     size: 8px;
+}.game{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-
 
 .choose-box {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    width:500px;
     align-items: center;
     margin-top: 50px;
     background: #86c660;   
-    height: 100vh;
     text-align: center;
     position: relative;
 }
@@ -248,8 +252,12 @@ li::marker {
     color: white;
     font-size: 36px;
     margin-bottom: 10px;
+    
 }
 
+.output{
+    margin: 35px;
+}
 .output p {
     color: white;
     font-size: 16px;
@@ -274,4 +282,8 @@ li::marker {
     to {
         transform: scale(1.2);
     }
+}
+
+.hidden {
+    display: none;
 }
