@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="main">
+        
+        <div class="container">
+            
+            <div class="heading">
+                <div class="head1"><h1 >ROCK</h1></div>
+                <div class="head1"><h1 >PAPER</h1></div>
+                <div class="head1"><h1 >SCISSORS</h1></div>
+            </div>
+
+            <div class="score-board">
+                <div class="score-tab">
+                  <div class="st-text">
+                    <h1>COMPUTER</h1>
+                    <h1>SCORE</h1>
+                  </div>
+                    <span id="computer-score">0</span>
+                
+                </div>
+                <div class="score-tab">
+                    <div class="st-text"> 
+                        <h1>YOUR</h1> 
+                        <h1>SCORE</h1>
+                    </div>
+                    <span id="human-score">0</span>
+                </div>
+            </div>
+
+        </div>
+        <div class="game">
+
+        <div class="choices">
+            <div class="sps">
+                <button class="stone" style="border: 16px solid #0074B6" class="choice">
+                    <img src="img/e2f514e97d8f1b87d406a7bced07190e2c368075.png" />
+                </button>
+                <button class="scissor"style="border: 16px solid #BD00FF" class="choice" data-choice="scissors">
+                    <img src="img/388b63da8e9ba336eea3ea7f107fc48755a6b68d.png" />
+                </button>
+                <button class="paper" style="border: 16px solid #FFA943" class="choice" data-choice="paper">
+                    <img src="img/9e584d5f879bf162796082bc4c606349436e0c52.png" />
+                </button>
+  
+            </div>
+            <div>
+            <div id="rules-popup" class="popup">
+                <div class="popup-content">
+                    <h2>Game Rules</h2>
+                    <ul>
+                        <li>Rock beats scissors, scissors beat paper, and paper beats rock</li>
+                        <li>Agree ahead of time whether you’ll count off “rock, paper, scissors, shoot” or just “rock, paper,
+                            scissors.”</li>
+                        <li>Use rock, paper, scissors to settle minor decisions or simply play to pass the time</li>
+                        <li></li>
+            
+                    </ul>
+                </div>
+            </div>
+            <div class="rules"> <button id="rules-button">RULES</button></div>
+        </div>
+         </div>   
+        
+            
+            <div class="choose-box">
+                <div class="box-left">
+
+                </div>
+                <div class="output">
+                    <h1>result</h1>
+                    <p>AGAINST PC</p>
+                    <button>PLAY AGAIN</button>
+                </div>
+                <div class="box-right">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
