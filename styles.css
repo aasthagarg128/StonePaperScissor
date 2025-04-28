@@ -90,6 +90,7 @@ body {
 
 .game{
     width: 100%;
+    margin-top: 95px;
 }
 
 .choices{
@@ -101,8 +102,9 @@ display: grid;
     display: grid;
     grid-template-columns: auto auto;
     justify-content: center;
-    margin-top: 95px;
     gap: 94px;
+    margin-left: 400px;
+    
 }
 
 .choices button {
@@ -119,11 +121,7 @@ display: grid;
     border: 16px solid transparent;
    
 }
-/* .sps{
-    display: grid;
-    flex-direction: row;
-    justify-content: end;
-} */
+
 .stone{
     margin-right: 47px;
 }
@@ -155,21 +153,32 @@ img {
     font-size: 21px;
     font-weight: 600;
     letter-spacing: 0.1em;
+    margin-top: 10px;
+    margin-left: 150px;
     
 }
 .rules{
     display:flex;
-    margin-left: 1300px;
+    
+}
+
+.pop{
+    display: flex;
+    flex-direction: column;
+    
+    margin-left: 100px;
+    
 }
 
 .popup{
+    display: none;
     width:269px;
     height:311px;
     border: 7px solid white;
     border-radius: 13px;
     background-color: #004429;
     color: white;
-    /* margin-left: 1200px; */
+    
 
 }
 .popup h2{
@@ -195,19 +204,67 @@ li::marker {
 }
 
 
+.choose-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 50px;
+    background: #86c660;   
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
 
-.output{
+.box-left,
+.box-right {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.player-circle {
+    position: relative;
+}
+
+.btn-cir {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 16px solid #ccc;
+    background-color: white;
+    background-size: 50%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.picked-text {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 14px;
     color: white;
 }
-.output h1{
-    
+
+.output h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 10px;
 }
-#celebration {
-    font-size: 30px;
-    color: green;
-    margin-top: 20px;
-    animation: pop 1s infinite alternate;
+
+.output p {
+    color: white;
+    font-size: 16px;
+    margin-bottom: 20px;
 }
+
+.output button {
+    padding: 10px 30px;
+    background: white;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 
 @keyframes pop {
     from {
